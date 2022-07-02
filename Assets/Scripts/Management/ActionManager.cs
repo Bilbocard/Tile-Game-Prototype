@@ -18,8 +18,14 @@ public class ActionManager : MonoBehaviour
     public void RequestMove(PlayerController player, Hex tile)
     {
         if (!SETTINGS.PlayerCanMove) return;
-        if (!AdventureManager.Instance._tileDictionary.ContainsKey(tile)) return;
+        if (!AdventureManager.Instance._tileDictionary.TryGetValue(tile, out var outTile)) return;
         if (Utils.DistanceBetweenHexes(tile, player.GetCurrentHex()) != 1) return;
-        StartCoroutine(player.Move(tile));
+        if (outTile.CanInteract())
+        {
+            player.InteractWith(outTile);
+            return;
+        }
+
+        player.MoveTo(tile);
     }
 }

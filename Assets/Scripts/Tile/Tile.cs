@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    private TileInformation _tileInformation;
-    private Hex _axial;
     [SerializeField] private TileDrawer tileDrawer;
+    private Hex _axial;
+    private TileInformation _tileInformation;
 
     public void Init(Hex axial, TileInformation tileInformation)
     {
@@ -16,30 +13,42 @@ public class Tile : MonoBehaviour
         DrawTile();
     }
 
-    public void MoveToTile()
+    public void Interact()
     {
         if (_tileInformation.creature != null)
         {
             _tileInformation.creature.Interact();
+            return;
         }
 
-        if (_tileInformation.location != null)
-        {
-            _tileInformation.location.Interact();
-        }
+        if (_tileInformation.location != null) _tileInformation.location.Interact();
     }
+
+    public bool CanInteract()
+    {
+        if (_tileInformation.creature != null) return true;
+
+        if (_tileInformation.location != null) return true;
+
+        return false;
+    }
+
     private void DrawTile()
     {
         tileDrawer.DrawTile(_tileInformation);
     }
 
-    public void HighlightTile(int distance)
+    public Hex GetLocation()
     {
-        tileDrawer.HighlightSprite(distance);
+        return _axial;
     }
 
-    public void UnhighlightTile()
+    public InteractableType GetInteractableType()
     {
-        tileDrawer.UnhighlightSprite();
+        if (_tileInformation.creature != null) return _tileInformation.creature.InteractableType();
+
+        if (_tileInformation.location != null) return _tileInformation.location.InteractableType();
+
+        return InteractableType.None;
     }
 }

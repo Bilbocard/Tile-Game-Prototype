@@ -1,12 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class Location : ScriptableObject
+public abstract class Location : ScriptableObject
 {
     [SerializeField] private string locationName;
     [SerializeField] private Sprite sprite;
+
+    public InteractableType InteractableType()
+    {
+        return global::InteractableType.Location;
+    }
 
     public Sprite GetSprite()
     {
@@ -15,11 +17,5 @@ public class Location : ScriptableObject
 
     public virtual void Interact()
     {
-        
-    }
-
-    public virtual void OnComplete()
-    {
-        
     }
 }

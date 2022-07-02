@@ -6,8 +6,9 @@ public class AdventureManager : MonoBehaviour
 {
     public static AdventureManager Instance;
     [SerializeField] private PredeterminedTile baseTile;
-    private Hex _currentTile = new Hex {q = 0, r = 0};
-    public Dictionary<Hex, Tile> _tileDictionary = new Dictionary<Hex, Tile>();
+    private Hex _currentTile = new() {q = 0, r = 0};
+    public Dictionary<Hex, Tile> _tileDictionary = new();
+
     private void Awake()
     {
         if (Instance == null)
@@ -15,6 +16,7 @@ public class AdventureManager : MonoBehaviour
             Instance = this;
             return;
         }
+
         Destroy(this);
     }
 
@@ -31,12 +33,12 @@ public class AdventureManager : MonoBehaviour
 
     private IEnumerator GenerateLocalTiles(Hex currentLocation)
     {
-        bool tileGenerated = false;
-        for (int i = 0; i < 6; i++)
+        var tileGenerated = false;
+        for (var i = 0; i < 6; i++)
         {
-            Hex newLocation = Utils.AxialNeighbour(currentLocation, i);
+            var newLocation = Utils.AxialNeighbour(currentLocation, i);
             if (_tileDictionary.ContainsKey(newLocation)) continue;
-            TileInformation builtTile = TileBuilder.Instance.BuildATile();
+            var builtTile = TileBuilder.Instance.BuildATile();
             PlaceNewTile(newLocation, builtTile);
             tileGenerated = true;
             yield return new WaitForSeconds(0.2f);
@@ -48,14 +50,14 @@ public class AdventureManager : MonoBehaviour
 
     private void PlaceNewTile(Hex location, TileInformation tileInformation)
     {
-        Tile tile = Instantiate(GameManager.Instance.tileBase, Utils.AxialToVector2(location), Quaternion.identity).GetComponent<Tile>();
+        var tile = Instantiate(GameManager.Instance.tileBase, Utils.AxialToVector2(location), Quaternion.identity)
+            .GetComponent<Tile>();
         tile.Init(location, tileInformation);
         _tileDictionary.Add(location, tile);
     }
 
     public IEnumerator MoveToTile(Hex newLocation)
     {
-        _tileDictionary[newLocation].MoveToTile();
         _currentTile = newLocation;
         yield return GenerateLocalTiles(newLocation);
         yield return null;

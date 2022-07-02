@@ -1,7 +1,7 @@
 public class Friendly : Creature
 {
-    public override CreatureType CreatureType()
+    public override InteractableType InteractableType()
     {
-        return global::CreatureType.Friendly;
+        return global::InteractableType.Friendly;
     }
 }

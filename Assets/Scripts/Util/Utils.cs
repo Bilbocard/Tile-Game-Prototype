@@ -3,10 +3,15 @@ using UnityEngine;
 
 public static class Utils
 {
-    private static readonly Hex[] AxialVectors = {new Hex{q=1,r=0}, new Hex{q=1,r=-1}, new Hex{q=0,r=-1}, new Hex{q=-1,r=0}, new Hex{q=-1,r=1}, new Hex{q=0,r=1}};
+    private static readonly Hex[] AxialVectors =
+    {
+        new() {q = 1, r = 0}, new() {q = 1, r = -1}, new() {q = 0, r = -1}, new() {q = -1, r = 0},
+        new() {q = -1, r = 1}, new() {q = 0, r = 1}
+    };
+
     public static Vector2 AxialToVector2(Hex axial)
     {
-        return axial.q * SETTINGS.QOffset + axial.r * SETTINGS.ROffset + (- axial.q - axial.r) * SETTINGS.SOffset;
+        return axial.q * SETTINGS.QOffset + axial.r * SETTINGS.ROffset + (-axial.q - axial.r) * SETTINGS.SOffset;
     }
 
     public static Hex AxialDirection(int direction)
@@ -16,7 +21,7 @@ public static class Utils
 
     public static Hex AxialAdd(Hex axial, Hex vector)
     {
-        return new Hex{q = axial.q + vector.q, r = axial.r + vector.r};
+        return new Hex {q = axial.q + vector.q, r = axial.r + vector.r};
     }
 
     public static Hex AxialNeighbour(Hex axial, int direction)
@@ -36,15 +41,15 @@ public static class Utils
 
     public static Hex MouseToWorldHex()
     {
-        Vector3 worldPosition = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
+        var worldPosition = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
         return CoordinateToWorldHex(worldPosition);
     }
 
     public static CubeFrac CubeRound(CubeFrac cubeFrac)
     {
-        int q = Mathf.RoundToInt(cubeFrac.q);
-        int r = Mathf.RoundToInt(cubeFrac.r);
-        int s = Mathf.RoundToInt(cubeFrac.s);
+        var q = Mathf.RoundToInt(cubeFrac.q);
+        var r = Mathf.RoundToInt(cubeFrac.r);
+        var s = Mathf.RoundToInt(cubeFrac.s);
 
         var qDiff = Mathf.Abs(q - cubeFrac.q);
         var rDiff = Mathf.Abs(r - cubeFrac.r);
@@ -57,9 +62,9 @@ public static class Utils
 
     public static Hex CoordinateToWorldHex(Vector3 worldPosition)
     {
-        float q = ((((Mathf.Sqrt(3f) / 3f) * worldPosition.x) + (1f / 3f * worldPosition.y)) / 0.95f);
-        float r = -(((2f / 3f) * worldPosition.y) / 0.95f);
-        return CubeToAxial(CubeRound(FracToCube(new Frac{q = q, r = r})));
+        var q = (Mathf.Sqrt(3f) / 3f * worldPosition.x + 1f / 3f * worldPosition.y) / 0.95f;
+        var r = -(2f / 3f * worldPosition.y / 0.95f);
+        return CubeToAxial(CubeRound(FracToCube(new Frac {q = q, r = r})));
     }
 
     public static bool CompareHexes(Hex firstHex, Hex secondHex)
@@ -69,7 +74,7 @@ public static class Utils
 
     public static int DistanceBetweenHexes(Hex firstHex, Hex secondHex)
     {
-        Hex axialSubbed = AxialSubtract(firstHex, secondHex);
+        var axialSubbed = AxialSubtract(firstHex, secondHex);
         return (Math.Abs(axialSubbed.q) + Math.Abs(axialSubbed.q + axialSubbed.r) + Math.Abs(axialSubbed.r)) / 2;
     }
 
@@ -83,6 +88,7 @@ public static class Utils
         return new Vector2(input.x, input.y);
     }
 }
+
 public struct Hex
 {
     public int q;

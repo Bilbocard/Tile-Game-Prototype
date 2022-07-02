@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
@@ -9,7 +6,8 @@ public class PlayerAnimator : MonoBehaviour
     private static readonly int PlayerIdle = Animator.StringToHash("PlayerIdle");
     private static readonly int FinishWalk = Animator.StringToHash("FinishWalk");
     private Animator _animator;
-    private bool _walking = false;
+    private bool _walking;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -33,5 +31,4 @@ public class PlayerAnimator : MonoBehaviour
         _walking = false;
         _animator.SetTrigger(FinishWalk);
     }
-
 }

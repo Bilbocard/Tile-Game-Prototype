@@ -5,9 +5,9 @@ public abstract class Creature : ScriptableObject
     [SerializeField] private string creatureName;
     [SerializeField] private Sprite sprite;
 
-    public virtual CreatureType CreatureType()
+    public virtual InteractableType InteractableType()
     {
-        return global::CreatureType.None;
+        return global::InteractableType.None;
     }
 
     public Sprite GetSprite()
@@ -17,12 +17,5 @@ public abstract class Creature : ScriptableObject
 
     public virtual void Interact()
     {
-        
     }
-
-    public virtual void OnComplete()
-    {
-        
-    }
-
 }

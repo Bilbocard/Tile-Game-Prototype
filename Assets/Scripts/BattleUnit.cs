@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BattleUnit : MonoBehaviour
@@ -10,6 +8,4 @@ public class BattleUnit : MonoBehaviour
     {
         return isPlayer;
     }
-    
-    
 }

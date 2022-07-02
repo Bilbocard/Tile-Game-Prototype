@@ -3,9 +3,9 @@ using UnityEngine;
 public class HighlightChecker : MonoBehaviour
 {
     public static HighlightChecker Instance;
-    private Hex _currentHighlight = new Hex{q = 10000, r = 10000};
-    private bool _paused = false;
-    private Hex _currentPosition;
+    private GameObject _currentHighlight;
+    private bool _paused;
+
     private void Awake()
     {
         if (Instance == null)
@@ -13,6 +13,7 @@ public class HighlightChecker : MonoBehaviour
             Instance = this;
             return;
         }
+
         Destroy(this);
     }
 
@@ -20,37 +21,26 @@ public class HighlightChecker : MonoBehaviour
     {
         if (!SETTINGS.PlayerCanMove && !_paused)
         {
-            UnhighlightTile(_currentHighlight);
+            _currentHighlight?.GetComponent<IHighlightable>()?.Unhighlight();
+            _currentHighlight = null;
             _paused = true;
+            return;
         }
 
-        if (SETTINGS.PlayerCanMove && _paused)
-        {
-            _paused = false;
-            _currentPosition = Utils.MouseToWorldHex();
-            HighlightTile(_currentPosition, AdventureManager.Instance.GetCurrentTile());
-        }
+        if (SETTINGS.PlayerCanMove && _paused) _paused = false;
         if (_paused) return;
-        _currentPosition = Utils.MouseToWorldHex();
-        if (Utils.CompareHexes(_currentPosition, _currentHighlight)) return;
-        UnhighlightTile(_currentHighlight);
-        HighlightTile(_currentPosition, AdventureManager.Instance.GetCurrentTile());
-        _currentHighlight = _currentPosition;
-    }
+        var mousePos = Utils.MouseToWorldHex();
+        AdventureManager.Instance._tileDictionary.TryGetValue(mousePos, out var tile);
+        if (tile != null && tile.gameObject == _currentHighlight) return;
+        _currentHighlight?.GetComponent<IHighlightable>()?.Unhighlight();
+        if (tile == null)
+        {
+            _currentHighlight = null;
+            return;
+        }
 
-    private void UnhighlightTile(Hex tile)
-    {
-        if (AdventureManager.Instance._tileDictionary.TryGetValue(tile, out Tile oldTile))
-        {
-            oldTile.UnhighlightTile();
-        }
-    }
-    
-    private void HighlightTile(Hex tile, Hex oldTile)
-    {
-        if (AdventureManager.Instance._tileDictionary.TryGetValue(tile, out Tile newTile))
-        {
-            newTile.HighlightTile(Utils.DistanceBetweenHexes(tile, oldTile));
-        }
+        _currentHighlight = tile.gameObject;
+        var inRange = Utils.DistanceBetweenHexes(AdventureManager.Instance.GetCurrentTile(), mousePos) <= 1;
+        _currentHighlight?.GetComponent<IHighlightable>()?.Highlight(inRange);
     }
 }

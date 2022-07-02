@@ -1,42 +1,32 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private PlayerAnimator _playerAnimator;
-    private float _offsetY = 0.32f;
     private Hex _currentHex;
-    private float _playerSpeed = 1.2f;
+    private PlayerMovement _playerMovement;
 
     private void Awake()
     {
         _currentHex = Utils.CoordinateToWorldHex(transform.position);
-        _playerAnimator = GetComponent<PlayerAnimator>();
+        _playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            ActionManager.Instance.RequestMove(this, Utils.MouseToWorldHex());
-        }
+        if (Input.GetMouseButtonDown(0)) ActionManager.Instance.RequestMove(this, Utils.MouseToWorldHex());
     }
 
-    public IEnumerator Move(Hex targetHex)
+    public void MoveTo(Hex targetHex)
     {
         SETTINGS.PlayerCanMove = false;
-        Vector2 targetLocation = Utils.AxialToVector2(targetHex) + new Vector2(0f, _offsetY);
-        _playerAnimator.AnimateWalk();
-        while ((Utils.Vector3ToVector2(transform.position) - targetLocation).sqrMagnitude > float.Epsilon)
-        {
-            transform.position = Vector2.MoveTowards(Utils.Vector3ToVector2(transform.position), targetLocation, Time.deltaTime * _playerSpeed);
-            yield return null;
-        }
-        _playerAnimator.AnimateWalkFinish();
-        transform.position = targetLocation;
+        StartCoroutine(Move(targetHex));
+    }
+
+    private IEnumerator Move(Hex targetHex)
+    {
         _currentHex = targetHex;
+        yield return _playerMovement.MoveTo(targetHex);
         yield return new WaitForSeconds(0.3f);
         yield return AdventureManager.Instance.MoveToTile(targetHex);
         SETTINGS.PlayerCanMove = true;
@@ -46,5 +36,44 @@ public class PlayerController : MonoBehaviour
     public Hex GetCurrentHex()
     {
         return _currentHex;
+    }
+
+    public void InteractWith(Tile tile)
+    {
+        SETTINGS.PlayerCanMove = false;
+        switch (tile.GetInteractableType())
+        {
+            case InteractableType.Location:
+                StartCoroutine(InteractWithLocation(tile));
+                break;
+            case InteractableType.Enemy:
+                StartCoroutine(InteractWithEnemy(tile));
+                break;
+            case InteractableType.Friendly:
+                StartCoroutine(InteractWithFriendly(tile));
+                break;
+            default:
+                Debug.Log("Interactable not implemented?");
+                break;
+        }
+    }
+
+    private IEnumerator InteractWithEnemy(Tile tile)
+    {
+        tile.Interact();
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(Move(tile.GetLocation()));
+    }
+
+    private IEnumerator InteractWithLocation(Tile tile)
+    {
+        yield return Move(tile.GetLocation());
+        tile.Interact();
+    }
+
+    private IEnumerator InteractWithFriendly(Tile tile)
+    {
+        yield return Move(tile.GetLocation());
+        tile.Interact();
     }
 }

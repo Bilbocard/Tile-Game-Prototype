@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 public class TileDrawer : MonoBehaviour
 {
@@ -15,11 +10,6 @@ public class TileDrawer : MonoBehaviour
     [SerializeField] private SpriteRenderer marker;
     [SerializeField] private SpriteRenderer flair;
     [SerializeField] private SpriteRenderer creature;
-    [SerializeField] private SpriteRenderer highlight;
-
-    [SerializeField] private Sprite highlightSprite;
-    [SerializeField] private Sprite highlightTooFarSprite;
-    [SerializeField] private SortingGroup sortingGroup;
 
     public void DrawTile(TileInformation tileInformation)
     {
@@ -31,23 +21,5 @@ public class TileDrawer : MonoBehaviour
         marker.sprite = null;
         flair.sprite = null;
         creature.sprite = tileInformation.creature != null ? tileInformation.creature.GetSprite() : null;
-    }
-
-    public void HighlightSprite(int distance)
-    {
-        sortingGroup.sortingOrder = 1;
-        if (distance <= 1)
-        {
-            highlight.sprite = highlightSprite;
-            return;
-        }
-
-        highlight.sprite = highlightTooFarSprite;
-    }
-
-    public void UnhighlightSprite()
-    {
-        highlight.sprite = null;
-        sortingGroup.sortingOrder = 0;
     }
 }

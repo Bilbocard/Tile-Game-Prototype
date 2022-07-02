@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "Hexplorer/New Tile Base", fileName = "New Tile Base")]
 public class TileBase : ScriptableObject
@@ -10,7 +9,7 @@ public class TileBase : ScriptableObject
 
     public Sprite GetSprite()
     {
-        int index = Random.Range(0, sprite.Length);
+        var index = Random.Range(0, sprite.Length);
         return sprite[index];
     }
 }

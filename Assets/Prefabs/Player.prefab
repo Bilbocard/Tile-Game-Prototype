@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5252555984866092038}
   - component: {fileID: 6417058181936276883}
   - component: {fileID: 69991789425041303}
+  - component: {fileID: 4021652978354992423}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -29,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.3829}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9078643047307061198}
   m_Father: {fileID: 0}
@@ -48,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!95 &6417058181936276883
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -61,6 +63,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -75,6 +78,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fa9b428a2868d947a3aede216a78412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4021652978354992423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217868052966058739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d29ee90b8534d2caa08c4f205e5723d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4272867286527604934
@@ -104,6 +119,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3217868052966058749}
   m_RootOrder: 0
@@ -119,6 +135,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

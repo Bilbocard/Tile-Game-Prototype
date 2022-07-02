@@ -1,14 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject tileBase;
-
     public static GameManager Instance;
+    public GameObject tileBase;
 
     private void Awake()
     {
@@ -17,6 +12,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             return;
         }
+
         Destroy(this);
     }
 

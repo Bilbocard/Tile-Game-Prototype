@@ -5,10 +5,10 @@ public enum BiomeType
     None
 }
 
-public enum CreatureType
+public enum InteractableType
 {
     Enemy,
     Friendly,
+    Location,
     None
 }
-    

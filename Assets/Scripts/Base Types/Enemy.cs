@@ -1,7 +1,7 @@
 public class Enemy : Creature
 {
-    public override CreatureType CreatureType()
+    public override InteractableType InteractableType()
     {
-        return global::CreatureType.Enemy;
+        return global::InteractableType.Enemy;
     }
 }
