@@ -168,7 +168,7 @@ TextureImporter:
       213: -5943033570613111956
     second: overlays_river_54
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -188,6 +188,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -196,9 +198,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -219,9 +221,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1415,6 +1421,62 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      overlays_river_4: -4192912850474953283
+      overlays_river_47: 1571217376592574666
+      overlays_river_0: -1837861515823346889
+      overlays_river_14: 3249018280172523942
+      overlays_river_43: 4827729693750542594
+      overlays_river_40: -2189017661453760202
+      overlays_river_11: -5997922868470005914
+      overlays_river_6: -8172701189799699145
+      overlays_river_5: 2414541308607318056
+      overlays_river_32: -2970594537735853355
+      overlays_river_41: -3187656074658976126
+      overlays_river_15: 6996105913328462184
+      overlays_river_19: -35064208230642170
+      overlays_river_28: 8565960110969449500
+      overlays_river_8: 9195508444357952571
+      overlays_river_37: 4579614651476190157
+      overlays_river_31: 8165714416831922367
+      overlays_river_29: 4036496563338944755
+      overlays_river_20: 6706008025755215559
+      overlays_river_51: 2796830354923002557
+      overlays_river_38: -7195583406469459148
+      overlays_river_39: -5709293450822919459
+      overlays_river_50: -4714254064248722957
+      overlays_river_36: 3869799628552288961
+      overlays_river_17: 7091576889272109069
+      overlays_river_18: 4031358831364127515
+      overlays_river_53: -4746746028853049898
+      overlays_river_49: 6750490477379590762
+      overlays_river_44: 2822866190504477537
+      overlays_river_10: 813603269457149533
+      overlays_river_54: -5943033570613111956
+      overlays_river_26: -1462193419256629375
+      overlays_river_24: 5857476116796051530
+      overlays_river_23: 48172067108173432
+      overlays_river_48: 2104533597644950262
+      overlays_river_13: 2780916237444141851
+      overlays_river_12: -8120472517144371936
+      overlays_river_25: 7030139400747733532
+      overlays_river_2: 5400668982549528069
+      overlays_river_27: -4928151460728572538
+      overlays_river_9: 1075274067372591182
+      overlays_river_22: -3608446602631778452
+      overlays_river_3: 6901412723638699757
+      overlays_river_30: -5274662433660018804
+      overlays_river_42: -313720412187033605
+      overlays_river_34: 7770726786044551726
+      overlays_river_1: 8037154855476617053
+      overlays_river_21: 952831724005141320
+      overlays_river_16: 6675714465227411688
+      overlays_river_45: 8494167584847460532
+      overlays_river_52: 1345089070337392005
+      overlays_river_46: -9117331687400157410
+      overlays_river_33: 4834006195306995791
+      overlays_river_35: -6186796691452119156
+      overlays_river_7: -6826756344492229118
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

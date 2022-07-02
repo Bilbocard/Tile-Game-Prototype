@@ -33,7 +33,7 @@ TextureImporter:
       213: 7270896952311528540
     second: tiles_valley_dense_covered_green_9
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +53,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,9 +63,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -84,9 +86,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -335,6 +341,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tiles_valley_dense_covered_green_0: -3351358943887698502
+      tiles_valley_dense_covered_green_5: -9046713098700076615
+      tiles_valley_dense_covered_green_8: -2030047538429467825
+      tiles_valley_dense_covered_green_4: 6100803924527610864
+      tiles_valley_dense_covered_green_1: 3058868085112027621
+      tiles_valley_dense_covered_green_3: -2133577579315759832
+      tiles_valley_dense_covered_green_9: 7270896952311528540
+      tiles_valley_dense_covered_green_2: -7782225632254522706
+      tiles_valley_dense_covered_green_6: -7078354518584627783
+      tiles_valley_dense_covered_green_7: -2069164716565859081
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

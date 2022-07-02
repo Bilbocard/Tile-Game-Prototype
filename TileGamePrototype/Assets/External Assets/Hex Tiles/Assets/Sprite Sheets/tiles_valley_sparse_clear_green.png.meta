@@ -33,7 +33,7 @@ TextureImporter:
       213: 8726914129947136071
     second: tiles_valley_sparse_clear_green_9
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +53,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,9 +63,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -84,9 +86,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -335,6 +341,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tiles_valley_sparse_clear_green_2: 3251436403184890435
+      tiles_valley_sparse_clear_green_8: -2672776934414421886
+      tiles_valley_sparse_clear_green_3: -8257899042708708260
+      tiles_valley_sparse_clear_green_9: 8726914129947136071
+      tiles_valley_sparse_clear_green_5: -496942080639762982
+      tiles_valley_sparse_clear_green_7: 643077000304489918
+      tiles_valley_sparse_clear_green_4: 684104032833051946
+      tiles_valley_sparse_clear_green_0: 144835868635567876
+      tiles_valley_sparse_clear_green_1: 2742249317000551105
+      tiles_valley_sparse_clear_green_6: -6335353846059617398
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

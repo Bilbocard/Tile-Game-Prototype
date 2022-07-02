@@ -93,7 +93,7 @@ TextureImporter:
       213: -8042885575761526605
     second: overlays_location_unframed_cut_standard_29
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -113,6 +113,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -121,9 +123,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -144,9 +146,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -815,6 +821,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      overlays_location_unframed_cut_standard_7: 2440471327912920464
+      overlays_location_unframed_cut_standard_13: 2025528830864478675
+      overlays_location_unframed_cut_standard_17: -7802615756750467012
+      overlays_location_unframed_cut_standard_22: 1777935228405129037
+      overlays_location_unframed_cut_standard_11: 6521367716890791318
+      overlays_location_unframed_cut_standard_27: -2030659464228619004
+      overlays_location_unframed_cut_standard_23: -4153080936897923118
+      overlays_location_unframed_cut_standard_14: -4228606174179689443
+      overlays_location_unframed_cut_standard_16: -8955989420642045213
+      overlays_location_unframed_cut_standard_3: -3434931386753472579
+      overlays_location_unframed_cut_standard_25: 5793939090222580495
+      overlays_location_unframed_cut_standard_6: -7676310266918048740
+      overlays_location_unframed_cut_standard_18: 6086181726736170056
+      overlays_location_unframed_cut_standard_26: -8192125115699113944
+      overlays_location_unframed_cut_standard_28: -4598241594861684232
+      overlays_location_unframed_cut_standard_29: -8042885575761526605
+      overlays_location_unframed_cut_standard_10: -5091479823834165174
+      overlays_location_unframed_cut_standard_9: -4240893593149597964
+      overlays_location_unframed_cut_standard_21: -924792367248102549
+      overlays_location_unframed_cut_standard_24: -8586856939325326823
+      overlays_location_unframed_cut_standard_4: -4176168145638044510
+      overlays_location_unframed_cut_standard_0: -818900010338130254
+      overlays_location_unframed_cut_standard_15: -3658892667357364773
+      overlays_location_unframed_cut_standard_19: 7074718250816013755
+      overlays_location_unframed_cut_standard_8: 6395892591800847722
+      overlays_location_unframed_cut_standard_12: -8497978283912173071
+      overlays_location_unframed_cut_standard_2: 6424792056268782205
+      overlays_location_unframed_cut_standard_20: -6549374346326317247
+      overlays_location_unframed_cut_standard_1: 1295827701628223955
+      overlays_location_unframed_cut_standard_5: -2610477338409650549
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -33,7 +33,7 @@ TextureImporter:
       213: 5562126989228441061
     second: tiles_mountain_peak_moor_blue_9
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +53,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,9 +63,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -84,9 +86,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -335,6 +341,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tiles_mountain_peak_moor_blue_8: -7521882419399327544
+      tiles_mountain_peak_moor_blue_5: 3915782120654187469
+      tiles_mountain_peak_moor_blue_7: 8313877073933282775
+      tiles_mountain_peak_moor_blue_3: -3001425459087235719
+      tiles_mountain_peak_moor_blue_4: 1368603191292400631
+      tiles_mountain_peak_moor_blue_1: 4407919315538510553
+      tiles_mountain_peak_moor_blue_2: -4429761906338932439
+      tiles_mountain_peak_moor_blue_9: 5562126989228441061
+      tiles_mountain_peak_moor_blue_0: -7178099659606883962
+      tiles_mountain_peak_moor_blue_6: 5948567442889807424
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

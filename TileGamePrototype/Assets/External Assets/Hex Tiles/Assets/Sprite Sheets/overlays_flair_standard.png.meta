@@ -183,7 +183,7 @@ TextureImporter:
       213: -3750805553784632515
     second: overlays_flair_standard_59
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -203,6 +203,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -211,9 +213,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -234,9 +236,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1535,6 +1541,67 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      overlays_flair_standard_9: 88011896304504375
+      overlays_flair_standard_11: 6087976972297235159
+      overlays_flair_standard_46: 1072239808397673746
+      overlays_flair_standard_13: 5852938203738356542
+      overlays_flair_standard_56: -365879702092770818
+      overlays_flair_standard_40: 8404738337768394734
+      overlays_flair_standard_31: 4040170201583283831
+      overlays_flair_standard_38: -4169099699794800619
+      overlays_flair_standard_8: -4594429719535604032
+      overlays_flair_standard_28: 6518952212608672692
+      overlays_flair_standard_32: -4293021546473742152
+      overlays_flair_standard_49: 3170224468721351628
+      overlays_flair_standard_3: 149894433195456351
+      overlays_flair_standard_35: 5602646924252622003
+      overlays_flair_standard_10: -7557567767796232765
+      overlays_flair_standard_20: -7869916029991549882
+      overlays_flair_standard_16: -1302131059478156055
+      overlays_flair_standard_43: -7323086703139312622
+      overlays_flair_standard_53: 8370205157266758462
+      overlays_flair_standard_50: -5610168576918986108
+      overlays_flair_standard_24: -5580811661588227711
+      overlays_flair_standard_57: -3634320195281052228
+      overlays_flair_standard_22: 6265647542837677954
+      overlays_flair_standard_14: 3839490835779909968
+      overlays_flair_standard_15: 9042081616895822292
+      overlays_flair_standard_34: 4619957607356805119
+      overlays_flair_standard_25: 4361729467116572652
+      overlays_flair_standard_5: 8558885492596779053
+      overlays_flair_standard_47: -6525024427918059630
+      overlays_flair_standard_2: -8236664931587214008
+      overlays_flair_standard_7: 8802542010178904801
+      overlays_flair_standard_17: -6920118467759915809
+      overlays_flair_standard_42: 4193022411258307900
+      overlays_flair_standard_41: 2129429004390019987
+      overlays_flair_standard_26: -8284801807229032853
+      overlays_flair_standard_55: -3051739086839632783
+      overlays_flair_standard_37: -3426216297423491688
+      overlays_flair_standard_52: 5672209770271115138
+      overlays_flair_standard_1: 7104198010143602566
+      overlays_flair_standard_39: -194892860654393941
+      overlays_flair_standard_4: -6465364675443494689
+      overlays_flair_standard_23: -3624211740900351188
+      overlays_flair_standard_29: 3844469545427752485
+      overlays_flair_standard_33: -2955939897875171165
+      overlays_flair_standard_59: -3750805553784632515
+      overlays_flair_standard_36: -8989981877504940515
+      overlays_flair_standard_18: 5502430384518528855
+      overlays_flair_standard_48: 5234898785272889878
+      overlays_flair_standard_51: -6951749207240128583
+      overlays_flair_standard_12: 6800081128086309911
+      overlays_flair_standard_44: -3386268236921279949
+      overlays_flair_standard_27: 1613015669709814045
+      overlays_flair_standard_30: -5530682099428089747
+      overlays_flair_standard_19: 7006091964508428026
+      overlays_flair_standard_21: 523975827526931751
+      overlays_flair_standard_0: -7534176934916253035
+      overlays_flair_standard_45: -251327934421443560
+      overlays_flair_standard_54: 425575635106646869
+      overlays_flair_standard_58: -1815643204402980285
+      overlays_flair_standard_6: -4877967813870393020
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

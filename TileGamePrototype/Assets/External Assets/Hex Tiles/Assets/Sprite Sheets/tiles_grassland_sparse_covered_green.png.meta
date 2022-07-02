@@ -33,7 +33,7 @@ TextureImporter:
       213: 7583536910344395696
     second: tiles_grassland_sparse_covered_green_9
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +53,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,9 +63,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -84,9 +86,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -335,6 +341,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tiles_grassland_sparse_covered_green_9: 7583536910344395696
+      tiles_grassland_sparse_covered_green_0: 9011322976731839783
+      tiles_grassland_sparse_covered_green_5: -1864019155217658968
+      tiles_grassland_sparse_covered_green_7: 7339199584556197174
+      tiles_grassland_sparse_covered_green_2: 1495352797743515898
+      tiles_grassland_sparse_covered_green_1: -2928277639532897839
+      tiles_grassland_sparse_covered_green_3: -1653615514992456278
+      tiles_grassland_sparse_covered_green_6: 4284134730418081413
+      tiles_grassland_sparse_covered_green_4: -1281481765593998725
+      tiles_grassland_sparse_covered_green_8: 5537596529482962041
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

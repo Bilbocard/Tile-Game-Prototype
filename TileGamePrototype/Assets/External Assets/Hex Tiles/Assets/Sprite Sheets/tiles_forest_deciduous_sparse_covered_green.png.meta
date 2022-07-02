@@ -33,7 +33,7 @@ TextureImporter:
       213: 7227103766945566977
     second: tiles_forest_deciduous_sparse_covered_green_9
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +53,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,9 +63,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -84,9 +86,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -335,6 +341,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tiles_forest_deciduous_sparse_covered_green_1: -3382830221896542691
+      tiles_forest_deciduous_sparse_covered_green_5: -5064686913889481885
+      tiles_forest_deciduous_sparse_covered_green_9: 7227103766945566977
+      tiles_forest_deciduous_sparse_covered_green_6: 5145289662437877437
+      tiles_forest_deciduous_sparse_covered_green_0: 8941839432223521448
+      tiles_forest_deciduous_sparse_covered_green_2: 450395890229869311
+      tiles_forest_deciduous_sparse_covered_green_8: -8248609992267671341
+      tiles_forest_deciduous_sparse_covered_green_3: 6566092756937675603
+      tiles_forest_deciduous_sparse_covered_green_4: -3584347677993666938
+      tiles_forest_deciduous_sparse_covered_green_7: 4429920899689978063
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

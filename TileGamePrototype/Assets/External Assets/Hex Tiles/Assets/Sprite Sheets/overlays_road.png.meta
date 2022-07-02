@@ -168,7 +168,7 @@ TextureImporter:
       213: 498358954098256530
     second: overlays_road_54
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -188,6 +188,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -196,9 +198,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -219,9 +221,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1415,6 +1421,62 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      overlays_road_48: 3427415962965674322
+      overlays_road_19: -7699490650831213809
+      overlays_road_40: -8413991738527300618
+      overlays_road_12: -377525558996476638
+      overlays_road_32: 6438141264346485577
+      overlays_road_33: 1168828308019956603
+      overlays_road_13: -8626510441271344032
+      overlays_road_43: -1286094921188386085
+      overlays_road_54: 498358954098256530
+      overlays_road_28: -3800568726241285388
+      overlays_road_2: 6916458556180128209
+      overlays_road_7: 6643308570709046021
+      overlays_road_26: 2163256439204465422
+      overlays_road_10: 5373900261104018047
+      overlays_road_53: -5428179285308850434
+      overlays_road_31: -6248461478039930313
+      overlays_road_24: -2177905053821293213
+      overlays_road_30: 2743206773373453013
+      overlays_road_51: -135239621556428315
+      overlays_road_0: 183573466261790316
+      overlays_road_3: -3711607238091898850
+      overlays_road_21: -7860532323679669207
+      overlays_road_29: 8822379209624335844
+      overlays_road_44: -2440297066172035689
+      overlays_road_52: -6488387567030593862
+      overlays_road_8: 1729700351518286854
+      overlays_road_34: -4473675566894452838
+      overlays_road_18: -3525292688078383142
+      overlays_road_14: 5013610477536108949
+      overlays_road_39: -5548060313160171427
+      overlays_road_41: 3093952618732259546
+      overlays_road_6: 8219889422349794694
+      overlays_road_37: -8879069881508380163
+      overlays_road_9: -9185111891838798732
+      overlays_road_22: -7597404860490685158
+      overlays_road_15: 1412386453052398910
+      overlays_road_23: -2661175760996300902
+      overlays_road_35: -7779479225778861441
+      overlays_road_46: 8531379204285938614
+      overlays_road_27: 5947591007232338715
+      overlays_road_45: 8584464127331291416
+      overlays_road_20: -1048562210850492030
+      overlays_road_49: 2399297396582264699
+      overlays_road_4: 3635230413238838829
+      overlays_road_42: 7680303327350448573
+      overlays_road_17: -5992700275466443689
+      overlays_road_36: -5237341982183342276
+      overlays_road_25: -5483169751914143718
+      overlays_road_38: -6927481602819891213
+      overlays_road_16: -7305861598572767984
+      overlays_road_50: 4119130586260714560
+      overlays_road_1: -6655943400958261752
+      overlays_road_5: 7346303262457856300
+      overlays_road_11: -5243274761064176983
+      overlays_road_47: 1741280616503911232
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

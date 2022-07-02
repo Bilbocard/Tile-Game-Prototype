@@ -33,7 +33,7 @@ TextureImporter:
       213: 5368401300512075446
     second: tiles_moor_dense_clear_blue_9
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +53,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,9 +63,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -84,9 +86,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -335,6 +341,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tiles_moor_dense_clear_blue_4: -5692236437342183081
+      tiles_moor_dense_clear_blue_2: 8019614311176236179
+      tiles_moor_dense_clear_blue_1: -190796480579789265
+      tiles_moor_dense_clear_blue_9: 5368401300512075446
+      tiles_moor_dense_clear_blue_3: 9181612344151785571
+      tiles_moor_dense_clear_blue_5: 6626890943922923847
+      tiles_moor_dense_clear_blue_6: -2494525654426250510
+      tiles_moor_dense_clear_blue_7: -3955820643759843774
+      tiles_moor_dense_clear_blue_0: -1001295015732640256
+      tiles_moor_dense_clear_blue_8: -4285106471978904994
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

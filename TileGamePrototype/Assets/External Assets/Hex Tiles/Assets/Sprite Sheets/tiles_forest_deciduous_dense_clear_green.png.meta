@@ -33,7 +33,7 @@ TextureImporter:
       213: 6281309836571341211
     second: tiles_forest_deciduous_dense_clear_green_9
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +53,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,9 +63,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -84,9 +86,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -335,6 +341,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tiles_forest_deciduous_dense_clear_green_2: 1957640042934584544
+      tiles_forest_deciduous_dense_clear_green_7: 4342144038800211713
+      tiles_forest_deciduous_dense_clear_green_4: -8572639648753846368
+      tiles_forest_deciduous_dense_clear_green_8: -4393316590803968859
+      tiles_forest_deciduous_dense_clear_green_9: 6281309836571341211
+      tiles_forest_deciduous_dense_clear_green_6: -2094699352189555971
+      tiles_forest_deciduous_dense_clear_green_0: -7406079835746668601
+      tiles_forest_deciduous_dense_clear_green_1: -2166618196762763783
+      tiles_forest_deciduous_dense_clear_green_5: -4363346163894639479
+      tiles_forest_deciduous_dense_clear_green_3: 1307301666737239110
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

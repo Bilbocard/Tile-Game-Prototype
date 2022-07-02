@@ -311,6 +311,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -319,9 +321,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -342,9 +344,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -2400,6 +2405,103 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      sprite_sheet_figures_90x90_framed_standard_84: -5462355702811230575
+      sprite_sheet_figures_90x90_framed_standard_66: 1441813660573242789
+      sprite_sheet_figures_90x90_framed_standard_15: 6245214009565785
+      sprite_sheet_figures_90x90_framed_standard_5: -2335696867563486389
+      sprite_sheet_figures_90x90_framed_standard_55: 2758495030361252984
+      sprite_sheet_figures_90x90_framed_standard_76: -8226387741565613110
+      sprite_sheet_figures_90x90_framed_standard_23: 6620927469198948794
+      sprite_sheet_figures_90x90_framed_standard_59: 7808061639808650918
+      sprite_sheet_figures_90x90_framed_standard_78: 6497268807537936265
+      sprite_sheet_figures_90x90_framed_standard_28: -1496106101780479240
+      sprite_sheet_figures_90x90_framed_standard_1: 5455491273142542199
+      sprite_sheet_figures_90x90_framed_standard_51: 2149114780896773717
+      sprite_sheet_figures_90x90_framed_standard_88: -2727891397780280600
+      sprite_sheet_figures_90x90_framed_standard_3: 6060662517214998729
+      sprite_sheet_figures_90x90_framed_standard_13: -7331115023925775989
+      sprite_sheet_figures_90x90_framed_standard_9: -4062079251048494609
+      sprite_sheet_figures_90x90_framed_standard_94: -1191367700937948727
+      sprite_sheet_figures_90x90_framed_standard_72: -7030230129809812110
+      sprite_sheet_figures_90x90_framed_standard_90: 1633424419673755709
+      sprite_sheet_figures_90x90_framed_standard_95: -4114858341370606639
+      sprite_sheet_figures_90x90_framed_standard_11: 3269925369292537013
+      sprite_sheet_figures_90x90_framed_standard_0: -3784447377300848084
+      sprite_sheet_figures_90x90_framed_standard_36: -6819968381890020180
+      sprite_sheet_figures_90x90_framed_standard_17: 8686904372354413668
+      sprite_sheet_figures_90x90_framed_standard_58: 2061388538361863243
+      sprite_sheet_figures_90x90_framed_standard_48: -1012486344550026720
+      sprite_sheet_figures_90x90_framed_standard_82: 7142045243200554862
+      sprite_sheet_figures_90x90_framed_standard_52: -5578649135817904493
+      sprite_sheet_figures_90x90_framed_standard_16: -5021448060255862100
+      sprite_sheet_figures_90x90_framed_standard_21: 9173053066375995269
+      sprite_sheet_figures_90x90_framed_standard_31: -5876597506683911028
+      sprite_sheet_figures_90x90_framed_standard_93: 7655563936316248104
+      sprite_sheet_figures_90x90_framed_standard_29: 4897995307420818518
+      sprite_sheet_figures_90x90_framed_standard_6: 6067416237523770933
+      sprite_sheet_figures_90x90_framed_standard_89: -6588864082812819447
+      sprite_sheet_figures_90x90_framed_standard_64: -2199481258237033314
+      sprite_sheet_figures_90x90_framed_standard_38: 375313851705664283
+      sprite_sheet_figures_90x90_framed_standard_86: -6886460501307088783
+      sprite_sheet_figures_90x90_framed_standard_8: 666488129177899383
+      sprite_sheet_figures_90x90_framed_standard_20: -3163685363426523722
+      sprite_sheet_figures_90x90_framed_standard_37: -8814393780937114387
+      sprite_sheet_figures_90x90_framed_standard_10: 3932090722443984668
+      sprite_sheet_figures_90x90_framed_standard_92: 8703052327674143768
+      sprite_sheet_figures_90x90_framed_standard_27: -4233985849785351379
+      sprite_sheet_figures_90x90_framed_standard_41: 6056068377732321926
+      sprite_sheet_figures_90x90_framed_standard_79: 1577314642096363486
+      sprite_sheet_figures_90x90_framed_standard_68: 8653151851292555658
+      sprite_sheet_figures_90x90_framed_standard_18: 7603056657069411766
+      sprite_sheet_figures_90x90_framed_standard_74: 1774826654992244142
+      sprite_sheet_figures_90x90_framed_standard_70: -6301372262346255596
+      sprite_sheet_figures_90x90_framed_standard_77: -2254965824722410173
+      sprite_sheet_figures_90x90_framed_standard_80: -2918649005895343517
+      sprite_sheet_figures_90x90_framed_standard_43: 868168915759822536
+      sprite_sheet_figures_90x90_framed_standard_30: 4142961542072496331
+      sprite_sheet_figures_90x90_framed_standard_50: -1713202885478917036
+      sprite_sheet_figures_90x90_framed_standard_39: 944438524078422825
+      sprite_sheet_figures_90x90_framed_standard_61: 5968981110582038020
+      sprite_sheet_figures_90x90_framed_standard_71: -3481079571682995591
+      sprite_sheet_figures_90x90_framed_standard_24: -6120878195259733113
+      sprite_sheet_figures_90x90_framed_standard_33: 8682688695818188309
+      sprite_sheet_figures_90x90_framed_standard_57: -1476105243680964359
+      sprite_sheet_figures_90x90_framed_standard_67: 916367702729643060
+      sprite_sheet_figures_90x90_framed_standard_87: -702074014383947812
+      sprite_sheet_figures_90x90_framed_standard_25: -1746176006066515057
+      sprite_sheet_figures_90x90_framed_standard_75: -2242237842970475148
+      sprite_sheet_figures_90x90_framed_standard_22: 8623743457043825121
+      sprite_sheet_figures_90x90_framed_standard_12: -7668597341853862575
+      sprite_sheet_figures_90x90_framed_standard_47: 2005547291528450968
+      sprite_sheet_figures_90x90_framed_standard_40: -8582271220475501539
+      sprite_sheet_figures_90x90_framed_standard_4: -4413875813903041433
+      sprite_sheet_figures_90x90_framed_standard_91: -9142612398061401637
+      sprite_sheet_figures_90x90_framed_standard_19: 4900302560028209511
+      sprite_sheet_figures_90x90_framed_standard_73: -2508397420982204180
+      sprite_sheet_figures_90x90_framed_standard_81: -7920865092775751525
+      sprite_sheet_figures_90x90_framed_standard_54: -2624481145014992688
+      sprite_sheet_figures_90x90_framed_standard_26: -4162543692933043467
+      sprite_sheet_figures_90x90_framed_standard_35: -9170085843374330313
+      sprite_sheet_figures_90x90_framed_standard_62: -1476689786805370947
+      sprite_sheet_figures_90x90_framed_standard_32: 5711525948745744646
+      sprite_sheet_figures_90x90_framed_standard_63: 7922269810994817175
+      sprite_sheet_figures_90x90_framed_standard_7: -7288393782986267172
+      sprite_sheet_figures_90x90_framed_standard_14: 1751516585773355128
+      sprite_sheet_figures_90x90_framed_standard_42: 999809087797393595
+      sprite_sheet_figures_90x90_framed_standard_34: 1282234501546258011
+      sprite_sheet_figures_90x90_framed_standard_53: -5532562673132143790
+      sprite_sheet_figures_90x90_framed_standard_49: -4225653501372021258
+      sprite_sheet_figures_90x90_framed_standard_60: 8804351399487124873
+      sprite_sheet_figures_90x90_framed_standard_69: 9094776688926111615
+      sprite_sheet_figures_90x90_framed_standard_83: 3753517248716557163
+      sprite_sheet_figures_90x90_framed_standard_45: 4701001908419080211
+      sprite_sheet_figures_90x90_framed_standard_44: -41750422078267069
+      sprite_sheet_figures_90x90_framed_standard_65: -7015499561991178786
+      sprite_sheet_figures_90x90_framed_standard_2: 2993019748061881976
+      sprite_sheet_figures_90x90_framed_standard_56: -1559513727027623869
+      sprite_sheet_figures_90x90_framed_standard_85: -6689509798549271249
+      sprite_sheet_figures_90x90_framed_standard_46: -1755605933619369848
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

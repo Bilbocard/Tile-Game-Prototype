@@ -183,7 +183,7 @@ TextureImporter:
       213: 6346178208590678576
     second: overlays_marker_standard_59
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -203,6 +203,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -211,9 +213,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -234,9 +236,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1535,6 +1541,67 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      overlays_marker_standard_0: -4029927706455097139
+      overlays_marker_standard_15: -363861271324839020
+      overlays_marker_standard_47: 7067421220521808233
+      overlays_marker_standard_55: 8492948392533483661
+      overlays_marker_standard_57: -827180823546764443
+      overlays_marker_standard_49: -1097734204421259792
+      overlays_marker_standard_45: 636044519857434921
+      overlays_marker_standard_54: -4152748893296797525
+      overlays_marker_standard_46: 6321640667506318579
+      overlays_marker_standard_37: 2637553253312464353
+      overlays_marker_standard_3: -7540742515309140673
+      overlays_marker_standard_25: 1511129311909551711
+      overlays_marker_standard_26: 8888135879815124181
+      overlays_marker_standard_16: 8827998313532778953
+      overlays_marker_standard_22: -5835226965124354863
+      overlays_marker_standard_58: 2179974001835287742
+      overlays_marker_standard_30: 3052914709202546002
+      overlays_marker_standard_52: -4869659997386661630
+      overlays_marker_standard_5: 3153596306156729881
+      overlays_marker_standard_1: -7778157446276035722
+      overlays_marker_standard_9: -4835954583806064687
+      overlays_marker_standard_14: -5434318596669009246
+      overlays_marker_standard_36: -1864782539644126763
+      overlays_marker_standard_56: 2246666331375430898
+      overlays_marker_standard_35: 5324026314629686879
+      overlays_marker_standard_8: 433690141066013607
+      overlays_marker_standard_19: -2515829900162854200
+      overlays_marker_standard_17: -729309964339873324
+      overlays_marker_standard_41: -7801876026224398173
+      overlays_marker_standard_31: -6379358827311457429
+      overlays_marker_standard_32: -4805830570221247519
+      overlays_marker_standard_24: 5986999396499962266
+      overlays_marker_standard_39: 7579682273183798650
+      overlays_marker_standard_7: -8461033043832890697
+      overlays_marker_standard_28: -1187946813004829812
+      overlays_marker_standard_21: 1397400780374290639
+      overlays_marker_standard_12: -8323878700343823420
+      overlays_marker_standard_43: -1972768231708210656
+      overlays_marker_standard_42: 3325453778830402374
+      overlays_marker_standard_23: 6086326186579565335
+      overlays_marker_standard_34: -171747119824797044
+      overlays_marker_standard_13: -6021273915433870319
+      overlays_marker_standard_10: 8919626794334857469
+      overlays_marker_standard_2: -7118625012033026260
+      overlays_marker_standard_38: 1124508367026671531
+      overlays_marker_standard_53: -203591176546780433
+      overlays_marker_standard_4: -835582073508465602
+      overlays_marker_standard_11: -4532442043125994721
+      overlays_marker_standard_18: 5725998895319548744
+      overlays_marker_standard_50: -1771120545800322372
+      overlays_marker_standard_29: -641661576028947469
+      overlays_marker_standard_48: -4329804402506517108
+      overlays_marker_standard_6: 7076813513368695086
+      overlays_marker_standard_20: 2958759174883273150
+      overlays_marker_standard_40: -4604259693165725646
+      overlays_marker_standard_44: -6830380072980093999
+      overlays_marker_standard_51: 4515506175824013999
+      overlays_marker_standard_59: 6346178208590678576
+      overlays_marker_standard_27: 5129913503250642268
+      overlays_marker_standard_33: -4229623166256410154
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
