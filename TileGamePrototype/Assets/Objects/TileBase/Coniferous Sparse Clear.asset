@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aff91235c690242992c1962b9543f8, type: 3}
+  m_Name: Coniferous Sparse Clear
+  m_EditorClassIdentifier: 
+  tileName: Coniferous Sparse Clear
+  biomeType: 0
+  sprite:
+  - {fileID: 21300000, guid: 7ee9c550c2ec9fc40bd94ed2810b9ec7, type: 3}
+  - {fileID: 21300000, guid: 7ffd96f9f6a01e54abaa5b229816bdce, type: 3}
+  - {fileID: 21300000, guid: 30e831bba1494e7449395ccadeda30e0, type: 3}
+  - {fileID: 21300000, guid: 53d8b698c9c29d44388602ffc87ae69c, type: 3}
+  - {fileID: 21300000, guid: 0ee308e45bde7464daebed8dcb425728, type: 3}
+  - {fileID: 21300000, guid: 6d3a8f719d8063a48a8993c123c8487d, type: 3}
+  - {fileID: 21300000, guid: 271a0f6c9ebda9249927ec2043a43074, type: 3}
+  - {fileID: 21300000, guid: b448308951d789e4f867ff4475adc37d, type: 3}
+  - {fileID: 21300000, guid: 2e47533011a13cc45b1a5dee993c159b, type: 3}
+  - {fileID: 21300000, guid: e9ec7d41fffac2a4d95044724a07b0f8, type: 3}
