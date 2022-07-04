@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
@@ -13,22 +14,34 @@ public class PlayerAnimator : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void AnimateWalk()
+    private void AnimateWalk()
     {
         if (_walking) return;
         _animator.Play(PlayerWalk);
         _walking = true;
     }
 
-    public void AnimateIdle()
+    private void AnimateIdle()
     {
         _walking = false;
         _animator.Play(PlayerIdle);
     }
 
-    public void AnimateWalkFinish()
+    private void AnimateWalkFinish()
     {
         _walking = false;
         _animator.SetTrigger(FinishWalk);
+    }
+
+    private void OnEnable()
+    {
+        PlayerMovement.StartMove += AnimateWalk;
+        PlayerMovement.EndMove += AnimateWalkFinish;
+    }
+
+    private void OnDisable()
+    {
+        PlayerMovement.StartMove -= AnimateWalk;
+        PlayerMovement.EndMove -= AnimateWalkFinish;
     }
 }

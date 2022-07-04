@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class AdventureManager : MonoBehaviour
     [SerializeField] private PredeterminedTile baseTile;
     private Hex _currentTile = new() {q = 0, r = 0};
     public Dictionary<Hex, Tile> _tileDictionary = new();
+    private bool _playerCanMove;
+    public static event Action<Hex> Move = delegate {  };
 
     private void Awake()
     {
@@ -16,19 +19,27 @@ public class AdventureManager : MonoBehaviour
             Instance = this;
             return;
         }
-
         Destroy(this);
     }
 
     public IEnumerator StartLevel(Hex startLocation)
     {
-        SETTINGS.PlayerCanMove = false;
+        GameManager.Instance.DisableMovement();
         PlaceNewTile(startLocation, baseTile.tileInformation);
         _currentTile = startLocation;
         yield return new WaitForSeconds(0.2f);
         yield return GenerateLocalTiles(startLocation);
-        SETTINGS.PlayerCanMove = true;
+        GameManager.Instance.EnableMovement();
         yield return null;
+    }
+    
+    private void RequestMove(Vector2 input)
+    {
+        if (!_playerCanMove) return;
+        Hex inputHex = Utils.CoordinateToWorldHex(input);
+        if (!_tileDictionary.TryGetValue(inputHex, out var outTile)) return;
+        if (Utils.DistanceBetweenHexes(inputHex, GetCurrentTile()) != 1) return;
+        Move.Invoke(inputHex);
     }
 
     private IEnumerator GenerateLocalTiles(Hex currentLocation)
@@ -63,8 +74,38 @@ public class AdventureManager : MonoBehaviour
         yield return null;
     }
 
+    public Tile GetTile(Hex tileHex)
+    {
+        if (!_tileDictionary.ContainsKey(tileHex)) return null;
+        return _tileDictionary[tileHex];
+    }
+
     public Hex GetCurrentTile()
     {
         return _currentTile;
+    }
+
+    private void EnableMovement()
+    {
+        _playerCanMove = true;
+    }
+
+    private void DisableMovement()
+    {
+        _playerCanMove = false;
+    }
+
+    private void OnEnable()
+    {
+        PlayerController.OnMouseInput += RequestMove;
+        GameManager.OnMovementEnabled += EnableMovement;
+        GameManager.OnMovementDisabled += DisableMovement;
+    }
+    
+    private void OnDisable()
+    {
+        PlayerController.OnMouseInput -= RequestMove;
+        GameManager.OnMovementEnabled -= EnableMovement;
+        GameManager.OnMovementDisabled -= DisableMovement;
     }
 }

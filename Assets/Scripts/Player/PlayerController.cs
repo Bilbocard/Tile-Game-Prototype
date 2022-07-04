@@ -1,44 +1,24 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Hex _currentHex;
-    private PlayerMovement _playerMovement;
+    private Camera _camera;
+    public static event Action<Vector2> OnMouseInput = delegate { };
+    
 
     private void Awake()
     {
-        _currentHex = Utils.CoordinateToWorldHex(transform.position);
-        _playerMovement = GetComponent<PlayerMovement>();
+        _camera = Camera.main;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) ActionManager.Instance.RequestMove(this, Utils.MouseToWorldHex());
+        if (Input.GetMouseButtonDown(0)) OnMouseInput.Invoke(_camera.ScreenToWorldPoint(Input.mousePosition));
     }
 
-    public void MoveTo(Hex targetHex)
-    {
-        SETTINGS.PlayerCanMove = false;
-        StartCoroutine(Move(targetHex));
-    }
-
-    private IEnumerator Move(Hex targetHex)
-    {
-        _currentHex = targetHex;
-        yield return _playerMovement.MoveTo(targetHex);
-        yield return new WaitForSeconds(0.3f);
-        yield return AdventureManager.Instance.MoveToTile(targetHex);
-        SETTINGS.PlayerCanMove = true;
-        yield return null;
-    }
-
-    public Hex GetCurrentHex()
-    {
-        return _currentHex;
-    }
-
-    public void InteractWith(Tile tile)
+    /*public void InteractWith(Tile tile)
     {
         SETTINGS.PlayerCanMove = false;
         switch (tile.GetInteractableType())
@@ -75,5 +55,5 @@ public class PlayerController : MonoBehaviour
     {
         yield return Move(tile.GetLocation());
         tile.Interact();
-    }
+    }*/
 }

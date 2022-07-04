@@ -11,7 +11,7 @@ public static class Utils
 
     public static Vector2 AxialToVector2(Hex axial)
     {
-        return axial.q * SETTINGS.QOffset + axial.r * SETTINGS.ROffset + (-axial.q - axial.r) * SETTINGS.SOffset;
+        return axial.q * Settings.QOffset + axial.r * Settings.ROffset + (-axial.q - axial.r) * Settings.SOffset;
     }
 
     public static Hex AxialDirection(int direction)

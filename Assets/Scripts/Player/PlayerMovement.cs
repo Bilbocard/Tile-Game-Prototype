@@ -1,30 +1,47 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private readonly float _offsetY = 0.32f;
-    private PlayerAnimator _playerAnimator;
 
     private readonly float _playerSpeed = 1.2f;
+    
+    public static event Action StartMove = delegate {  };
+    public static event Action EndMove = delegate {  };
 
-    private void Awake()
+    private void Move(Hex hex)
     {
-        _playerAnimator = GetComponent<PlayerAnimator>();
+        StartCoroutine(MoveTo(hex));
     }
 
     public IEnumerator MoveTo(Hex targetHex)
     {
+        GameManager.Instance.DisableMovement();
         var targetLocation = Utils.AxialToVector2(targetHex) + new Vector2(0f, _offsetY);
-        _playerAnimator.AnimateWalk();
+        StartMove.Invoke();
         while ((Utils.Vector3ToVector2(transform.position) - targetLocation).sqrMagnitude > float.Epsilon)
         {
             transform.position = Vector2.MoveTowards(Utils.Vector3ToVector2(transform.position), targetLocation,
                 Time.deltaTime * _playerSpeed);
             yield return null;
         }
-
-        _playerAnimator.AnimateWalkFinish();
+        EndMove.Invoke();
         transform.position = targetLocation;
+        yield return new WaitForSeconds(0.3f);
+        yield return AdventureManager.Instance.MoveToTile(targetHex);
+        GameManager.Instance.EnableMovement();
+        yield return null;
+    }
+
+    private void OnEnable()
+    {
+        AdventureManager.Move += Move;
+    }
+
+    private void OnDisable()
+    {
+        AdventureManager.Move -= Move;
     }
 }
