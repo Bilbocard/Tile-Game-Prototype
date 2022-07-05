@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class HighlightChecker : MonoBehaviour
 {
-    public static HighlightChecker Instance;
+    private static HighlightChecker _instance;
     private GameObject _currentHighlight;
     private bool _paused;
 
     private void Awake()
     {
-        if (Instance == null)
+        if (_instance == null)
         {
-            Instance = this;
+            _instance = this;
             return;
         }
 
@@ -43,8 +43,8 @@ public class HighlightChecker : MonoBehaviour
         if (_currentHighlight != null)
         {
             _currentHighlight.GetComponent<IHighlightable>()?.Unhighlight();
+            _currentHighlight = null;
         }
-        _currentHighlight = null;
         _paused = true;
     }
 

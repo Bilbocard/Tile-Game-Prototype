@@ -33,7 +33,7 @@ public class AdventureManager : MonoBehaviour
         yield return null;
     }
     
-    private void RequestMove(Vector2 input)
+    public void RequestMove(Vector2 input)
     {
         if (!_playerCanMove) return;
         Hex inputHex = Utils.CoordinateToWorldHex(input);
@@ -84,7 +84,7 @@ public class AdventureManager : MonoBehaviour
     {
         return _currentTile;
     }
-
+    
     private void EnableMovement()
     {
         _playerCanMove = true;
@@ -97,14 +97,12 @@ public class AdventureManager : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerController.OnMouseInput += RequestMove;
         GameManager.OnMovementEnabled += EnableMovement;
         GameManager.OnMovementDisabled += DisableMovement;
     }
     
     private void OnDisable()
     {
-        PlayerController.OnMouseInput -= RequestMove;
         GameManager.OnMovementEnabled -= EnableMovement;
         GameManager.OnMovementDisabled -= DisableMovement;
     }

@@ -3,6 +3,16 @@ using UnityEngine;
 
 public static class Utils
 {
+    private static readonly float TileSizeY = 1.9f;
+    private static readonly float EdgeSize = TileSizeY / 2f;
+    private static readonly Vector2 ROffset = new(0f, -EdgeSize);
+
+    private static readonly Vector2 QOffset = new(Mathf.Sqrt(EdgeSize * EdgeSize - 0.25f * EdgeSize * EdgeSize),
+        EdgeSize / 2f);
+
+    private static readonly Vector2 SOffset = new(-Mathf.Sqrt(EdgeSize * EdgeSize - 0.25f * EdgeSize * EdgeSize),
+        EdgeSize / 2f);
+    
     private static readonly Hex[] AxialVectors =
     {
         new() {q = 1, r = 0}, new() {q = 1, r = -1}, new() {q = 0, r = -1}, new() {q = -1, r = 0},
@@ -11,7 +21,7 @@ public static class Utils
 
     public static Vector2 AxialToVector2(Hex axial)
     {
-        return axial.q * Settings.QOffset + axial.r * Settings.ROffset + (-axial.q - axial.r) * Settings.SOffset;
+        return axial.q * QOffset + axial.r * ROffset + (-axial.q - axial.r) * SOffset;
     }
 
     public static Hex AxialDirection(int direction)
